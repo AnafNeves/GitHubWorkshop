@@ -30,9 +30,10 @@ editor_options:
 <!--
   Styles live in workshop.scss. Useful classes:
     [word]{.git} / [word]{.gh}     orange Git / blue GitHub words
+    [word]{.desk}                  purple GitHub Desktop words
     [word]{.good} / [word]{.bad}   green / red words
     [phrase]{.hl}                  highlighter-pen effect
-    ::: {.card} ... :::            soft box (add .git, .gh, .good or .bad for the top colour)
+    ::: {.card} ... :::            soft box (add .git, .gh, .desk, .good or .bad for the top colour)
     ::: {.grid2} / {.grid3}        put cards side by side
     ::: {.keybox} ... :::          key message box
 
@@ -45,7 +46,7 @@ editor_options:
 ::: {.grid3}
 ::: {.card}
 [Why]{.card-title}
-Why use Git and GitHub, for the lab and for you?
+Why use Git and GitHub?
 :::
 
 ::: {.card}
@@ -77,45 +78,7 @@ No prior experience needed. Ask questions at any time!
 
 # Why bother? {background-color="#191970"}
 
-## The lab's view: one repo per project
-
-All our projects live on [**github.com/RealityBending**](https://github.com/RealityBending)
-
-- Every project has **its own repository**
-- All repos are **organised the same way**, so anyone can find anything
-- Everything in one place: **code, data, documents and paper**
-- A full history of every change, and easy to **share** when we publish
-
-## How our repos are organised
-
-::: {.grid2}
-::: {.card .gh .fragment}
-[`analysis/`]{.card-title}
-The analysis scripts
-:::
-
-::: {.card .gh .fragment}
-[`data/`]{.card-title}
-The **anonymised** data, ready to analyse
-:::
-
-::: {.card .gh .fragment}
-[`documents/`]{.card-title}
-The approved ethics (PDF) and ethics documents, e.g., the questionnaires we use as PDFs
-:::
-
-::: {.card .git .fragment}
-[`paper/`]{.card-title}
-Eventually: the manuscript (written in R), with a folder for each journal we submit to
-:::
-:::
-
-::: {.callout-important .fragment}
-## Where is the raw data?
-The **raw** data stays on **Box**. A **pre-processing script** anonymises it and saves the anonymised version in the repo's `data/` folder.
-:::
-
-## Your view: sound familiar?
+## Sound familiar?
 
 :::: {.columns}
 
@@ -174,11 +137,9 @@ With GitHub Pages (e.g., [The REBEL lab](https://realitybendinglab.com/))
 
 # Key ideas {background-color="#191970"}
 
-## Git vs GitHub
+## Git, GitHub Desktop and GitHub
 
-:::: {.columns}
-
-::: {.column width="50%"}
+::: {.grid3}
 ::: {.card .git}
 [[Git]{.git}]{.card-title}
 
@@ -186,9 +147,15 @@ With GitHub Pages (e.g., [The REBEL lab](https://realitybendinglab.com/))
 - Installed on **your computer**
 - Tracks every change to your files (*version control*)
 :::
+
+::: {.card .desk}
+[[GitHub Desktop]{.desk}]{.card-title}
+
+- An **app** on **your computer**
+- Buttons instead of typing Git commands
+- Connects your computer to GitHub
 :::
 
-::: {.column width="50%"}
 ::: {.card .gh}
 [[GitHub]{.gh}]{.card-title}
 
@@ -197,7 +164,6 @@ With GitHub Pages (e.g., [The REBEL lab](https://realitybendinglab.com/))
 - For sharing and collaborating
 :::
 :::
-::::
 
 ## An analogy with R
 
@@ -236,7 +202,7 @@ With GitHub Pages (e.g., [The REBEL lab](https://realitybendinglab.com/))
    - Mac: **GitHub Desktop ➜ Settings ➜ Git**
 :::
 
-## A quick tour
+## A quick tour of GitHub Desktop
 
 :::: {.columns}
 

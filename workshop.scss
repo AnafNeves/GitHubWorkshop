@@ -9,6 +9,7 @@ $presentation-heading-font-weight: 700;
 // Workshop palette
 $col-git: #F05032;      // Git (orange, from the Git logo)
 $col-gh: #191970;       // GitHub (midnight blue, section slides)
+$col-desk: #6f42c1;     // GitHub Desktop (purple, from its logo)
 $col-good: #1a7f37;     // GitHub green
 $col-bad: #cf222e;      // GitHub red
 $col-accent: #191970;
@@ -19,6 +20,7 @@ $col-soft: #f4f5fa;
 // ---- Coloured words -------------------------------------------------------
 .git    { color: $col-git;  font-weight: 700; }
 .gh     { color: $col-gh;   font-weight: 700; }
+.desk   { color: $col-desk; font-weight: 700; }
 .good   { color: $col-good; font-weight: 700; }
 .bad    { color: $col-bad;  font-weight: 700; }
 .muted  { color: #6e7781; }
@@ -56,6 +58,7 @@ $col-soft: #f4f5fa;
 }
 .card.git  { border-top-color: $col-git;  color: inherit; font-weight: normal; }
 .card.gh   { border-top-color: $col-gh;   color: inherit; font-weight: normal; }
+.card.desk { border-top-color: $col-desk; color: inherit; font-weight: normal; }
 .card.good { border-top-color: $col-good; color: inherit; font-weight: normal; }
 .card.bad  { border-top-color: $col-bad;  color: inherit; font-weight: normal; }
 

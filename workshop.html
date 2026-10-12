@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="workshop_files/libs/revealjs/dist/theme/quarto-c03d0b72a8636ada8ce4b8fc5d1cae49.css">
+  <link rel="stylesheet" href="workshop_files/libs/revealjs/dist/theme/quarto-54c5a18d9eaa44ed3d7edc951acd74a0.css">
   <link href="workshop_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="workshop_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="workshop_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -148,9 +148,10 @@
 <!--
   Styles live in workshop.scss. Useful classes:
     [word]{.git} / [word]{.gh}     orange Git / blue GitHub words
+    [word]{.desk}                  purple GitHub Desktop words
     [word]{.good} / [word]{.bad}   green / red words
     [phrase]{.hl}                  highlighter-pen effect
-    ::: {.card} ... :::            soft box (add .git, .gh, .good or .bad for the top colour)
+    ::: {.card} ... :::            soft box (add .git, .gh, .desk, .good or .bad for the top colour)
     ::: {.grid2} / {.grid3}        put cards side by side
     ::: {.keybox} ... :::          key message box
 
@@ -162,7 +163,7 @@
 <h2>Today</h2>
 <div class="grid3">
 <div class="card">
-<p><span class="card-title">Why</span> Why use Git and GitHub, for the lab and for you?</p>
+<p><span class="card-title">Why</span> Why use Git and GitHub?</p>
 </div>
 <div class="card">
 <p><span class="card-title">Key ideas</span> The words you’ll hear</p>
@@ -188,50 +189,8 @@
 <h1>Why bother?</h1>
 
 </section>
-<section id="the-labs-view-one-repo-per-project" class="slide level2">
-<h2>The lab’s view: one repo per project</h2>
-<p>All our projects live on <a href="https://github.com/RealityBending"><strong>github.com/RealityBending</strong></a></p>
-<ul>
-<li class="fragment">Every project has <strong>its own repository</strong></li>
-<li class="fragment">All repos are <strong>organised the same way</strong>, so anyone can find anything</li>
-<li class="fragment">Everything in one place: <strong>code, data, documents and paper</strong></li>
-<li class="fragment">A full history of every change, and easy to <strong>share</strong> when we publish</li>
-</ul>
-</section>
-<section id="how-our-repos-are-organised" class="slide level2">
-<h2>How our repos are organised</h2>
-<div class="grid2">
-<div class="card gh fragment">
-<p><span class="card-title"><code>analysis/</code></span> The analysis scripts</p>
-</div>
-<div class="card gh fragment">
-<p><span class="card-title"><code>data/</code></span> The <strong>anonymised</strong> data, ready to analyse</p>
-</div>
-<div class="card gh fragment">
-<p><span class="card-title"><code>documents/</code></span> The approved ethics (PDF) and ethics documents, e.g., the questionnaires we use as PDFs</p>
-</div>
-<div class="card git fragment">
-<p><span class="card-title"><code>paper/</code></span> Eventually: the manuscript (written in R), with a folder for each journal we submit to</p>
-</div>
-</div>
-<div class="fragment">
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Where is the raw data?</strong></p>
-</div>
-<div class="callout-content">
-<p>The <strong>raw</strong> data stays on <strong>Box</strong>. A <strong>pre-processing script</strong> anonymises it and saves the anonymised version in the repo’s <code>data/</code> folder.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="your-view-sound-familiar" class="slide level2">
-<h2>Your view: sound familiar?</h2>
+<section id="sound-familiar" class="slide level2">
+<h2>Sound familiar?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="card bad">
@@ -280,10 +239,9 @@
 <h1>Key ideas</h1>
 
 </section>
-<section id="git-vs-github" class="slide level2">
-<h2>Git vs GitHub</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<section id="git-github-desktop-and-github" class="slide level2">
+<h2>Git, GitHub Desktop and GitHub</h2>
+<div class="grid3">
 <div class="card git">
 <p><span class="card-title"><span class="git">Git</span></span></p>
 <ul>
@@ -292,7 +250,14 @@
 <li class="fragment">Tracks every change to your files (<em>version control</em>)</li>
 </ul>
 </div>
-</div><div class="column" style="width:50%;">
+<div class="card desk">
+<p><span class="card-title"><span class="desk">GitHub Desktop</span></span></p>
+<ul>
+<li class="fragment">An <strong>app</strong> on <strong>your computer</strong></li>
+<li class="fragment">Buttons instead of typing Git commands</li>
+<li class="fragment">Connects your computer to GitHub</li>
+</ul>
+</div>
 <div class="card gh">
 <p><span class="card-title"><span class="gh">GitHub</span></span></p>
 <ul>
@@ -301,7 +266,7 @@
 <li class="fragment">For sharing and collaborating</li>
 </ul>
 </div>
-</div></div>
+</div>
 </section>
 <section id="an-analogy-with-r" class="slide level2">
 <h2>An analogy with R</h2>
@@ -407,8 +372,8 @@
 </ol>
 </div>
 </section>
-<section id="a-quick-tour" class="slide level2">
-<h2>A quick tour</h2>
+<section id="a-quick-tour-of-github-desktop" class="slide level2">
+<h2>A quick tour of GitHub Desktop</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <div>
@@ -455,7 +420,7 @@
 <div>
 <svg aria-roledescription="flowchart-v2" role="graphics-document document" viewbox="0 0 726.125 89.81514739990234" style="; display: block; margin: auto auto auto auto" class="flowchart" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="960" id="mermaid-figure-1" height="480">
 <style>#mermaid-figure-1{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-figure-1 .error-icon{fill:#552222;}#mermaid-figure-1 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-1 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-1 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-1 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-1 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-1 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-1 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-1 .marker{fill:#333333;stroke:#333333;}#mermaid-figure-1 .marker.cross{stroke:#333333;}#mermaid-figure-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-1 p{margin:0;}#mermaid-figure-1 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#mermaid-figure-1 .cluster-label text{fill:#333;}#mermaid-figure-1 .cluster-label span{color:#333;}#mermaid-figure-1 .cluster-label span p{background-color:transparent;}#mermaid-figure-1 .label text,#mermaid-figure-1 span{fill:#333;color:#333;}#mermaid-figure-1 .node rect,#mermaid-figure-1 .node circle,#mermaid-figure-1 .node ellipse,#mermaid-figure-1 .node polygon,#mermaid-figure-1 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-1 .rough-node .label text,#mermaid-figure-1 .node .label text{text-anchor:middle;}#mermaid-figure-1 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-figure-1 .node .label{text-align:center;}#mermaid-figure-1 .node.clickable{cursor:pointer;}#mermaid-figure-1 .arrowheadPath{fill:#333333;}#mermaid-figure-1 .edgePath .path{stroke:#333333;stroke-width:2.0px;}#mermaid-figure-1 .flowchart-link{stroke:#333333;fill:none;}#mermaid-figure-1 .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#mermaid-figure-1 .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#mermaid-figure-1 .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#mermaid-figure-1 .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#mermaid-figure-1 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaid-figure-1 .cluster text{fill:#333;}#mermaid-figure-1 .cluster span{color:#333;}#mermaid-figure-1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-1 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#mermaid-figure-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
-<g><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1791817104345_flowchart-v2-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="4.5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1791817104345_flowchart-v2-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1791817104345_flowchart-v2-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1791817104345_flowchart-v2-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1791817104345_flowchart-v2-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1791817104345_flowchart-v2-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#mermaid-1791817104345_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_A_B_0" d="M116.297,35.923L129.371,33.754C142.445,31.585,168.594,27.246,188.205,26.294C207.816,25.342,220.891,27.776,233.309,30.088C245.728,32.4,257.492,34.59,263.373,35.685L269.255,36.78"></path><path marker-end="url(#mermaid-1791817104345_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_B_C_1" d="M352.641,38.677L369.398,36.049C386.156,33.421,419.672,28.164,444.809,26.545C469.945,24.925,486.703,26.942,502.799,28.88C518.895,30.818,534.329,32.676,542.046,33.605L549.763,34.534"></path><path marker-end="url(#mermaid-1791817104345_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_C_B_2" d="M553.734,54.803L536.977,56.82C520.219,58.838,486.703,62.873,461.566,63.576C436.43,64.279,419.672,61.651,403.573,59.126C387.473,56.601,372.033,54.18,364.313,52.969L356.592,51.758"></path><path marker-end="url(#mermaid-1791817104345_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_B_A_3" d="M273.188,52.303L260.113,54.737C247.039,57.171,220.891,62.04,201.279,63.389C181.668,64.738,168.594,62.569,156.177,60.509C143.761,58.449,132.002,56.498,126.122,55.522L120.243,54.547"></path></g><g class="edgeLabels"><g transform="translate(194.7421875, 22.907573699951172)" class="edgeLabel"><g transform="translate(-26.046875, -12)" class="label"><foreignobject height="24" width="52.09375">
+<g><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1791818512632_flowchart-v2-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerheight="8" markerwidth="8" markerunits="userSpaceOnUse" refy="5" refx="4.5" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1791818512632_flowchart-v2-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="11" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1791818512632_flowchart-v2-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5" refx="-1" viewbox="0 0 10 10" class="marker flowchart-v2" id="mermaid-1791818512632_flowchart-v2-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="12" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1791818512632_flowchart-v2-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerheight="11" markerwidth="11" markerunits="userSpaceOnUse" refy="5.2" refx="-1" viewbox="0 0 11 11" class="marker cross flowchart-v2" id="mermaid-1791818512632_flowchart-v2-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#mermaid-1791818512632_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_A_B_0" d="M116.297,35.923L129.371,33.754C142.445,31.585,168.594,27.246,188.205,26.294C207.816,25.342,220.891,27.776,233.309,30.088C245.728,32.4,257.492,34.59,263.373,35.685L269.255,36.78"></path><path marker-end="url(#mermaid-1791818512632_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_B_C_1" d="M352.641,38.677L369.398,36.049C386.156,33.421,419.672,28.164,444.809,26.545C469.945,24.925,486.703,26.942,502.799,28.88C518.895,30.818,534.329,32.676,542.046,33.605L549.763,34.534"></path><path marker-end="url(#mermaid-1791818512632_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_C_B_2" d="M553.734,54.803L536.977,56.82C520.219,58.838,486.703,62.873,461.566,63.576C436.43,64.279,419.672,61.651,403.573,59.126C387.473,56.601,372.033,54.18,364.313,52.969L356.592,51.758"></path><path marker-end="url(#mermaid-1791818512632_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_B_A_3" d="M273.188,52.303L260.113,54.737C247.039,57.171,220.891,62.04,201.279,63.389C181.668,64.738,168.594,62.569,156.177,60.509C143.761,58.449,132.002,56.498,126.122,55.522L120.243,54.547"></path></g><g class="edgeLabels"><g transform="translate(194.7421875, 22.907573699951172)" class="edgeLabel"><g transform="translate(-26.046875, -12)" class="label"><foreignobject height="24" width="52.09375">
 <div class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;" data-xmlns="http://www.w3.org/1999/xhtml">
 <span class="edgeLabel">
 <p>
@@ -760,9 +725,9 @@ Your computer
 <div>
 <p></p><figure class=""><p></p>
 <div>
-<svg aria-roledescription="gitGraph" role="graphics-document document" viewbox="-127.453125 -19 435.453125 173.89695739746094" style="; display: block; margin: auto auto auto auto" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="960" id="mermaid-figure-2" height="480">
+<svg aria-roledescription="gitGraph" role="graphics-document document" viewbox="-127.453125 -19 435.453125 172.5389862060547" style="; display: block; margin: auto auto auto auto" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="960" id="mermaid-figure-2" height="480">
 <style>#mermaid-figure-2{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-figure-2 .error-icon{fill:#552222;}#mermaid-figure-2 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-2 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-2 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-2 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-2 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-2 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-2 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-2 .marker{fill:#333333;stroke:#333333;}#mermaid-figure-2 .marker.cross{stroke:#333333;}#mermaid-figure-2 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-2 p{margin:0;}#mermaid-figure-2 .commit-id,#mermaid-figure-2 .commit-msg,#mermaid-figure-2 .branch-label{fill:lightgrey;color:lightgrey;font-family:'trebuchet ms',verdana,arial,sans-serif;font-family:var(--mermaid-font-family);}#mermaid-figure-2 .branch-label0{fill:#ffffff;}#mermaid-figure-2 .commit0{stroke:hsl(240, 100%, 46.2745098039%);fill:hsl(240, 100%, 46.2745098039%);}#mermaid-figure-2 .commit-highlight0{stroke:hsl(60, 100%, 3.7254901961%);fill:hsl(60, 100%, 3.7254901961%);}#mermaid-figure-2 .label0{fill:hsl(240, 100%, 46.2745098039%);}#mermaid-figure-2 .arrow0{stroke:hsl(240, 100%, 46.2745098039%);}#mermaid-figure-2 .branch-label1{fill:black;}#mermaid-figure-2 .commit1{stroke:hsl(60, 100%, 43.5294117647%);fill:hsl(60, 100%, 43.5294117647%);}#mermaid-figure-2 .commit-highlight1{stroke:rgb(0, 0, 160.5);fill:rgb(0, 0, 160.5);}#mermaid-figure-2 .label1{fill:hsl(60, 100%, 43.5294117647%);}#mermaid-figure-2 .arrow1{stroke:hsl(60, 100%, 43.5294117647%);}#mermaid-figure-2 .branch-label2{fill:black;}#mermaid-figure-2 .commit2{stroke:hsl(80, 100%, 46.2745098039%);fill:hsl(80, 100%, 46.2745098039%);}#mermaid-figure-2 .commit-highlight2{stroke:rgb(48.8333333334, 0, 146.5000000001);fill:rgb(48.8333333334, 0, 146.5000000001);}#mermaid-figure-2 .label2{fill:hsl(80, 100%, 46.2745098039%);}#mermaid-figure-2 .arrow2{stroke:hsl(80, 100%, 46.2745098039%);}#mermaid-figure-2 .branch-label3{fill:#ffffff;}#mermaid-figure-2 .commit3{stroke:hsl(210, 100%, 46.2745098039%);fill:hsl(210, 100%, 46.2745098039%);}#mermaid-figure-2 .commit-highlight3{stroke:rgb(146.5000000001, 73.2500000001, 0);fill:rgb(146.5000000001, 73.2500000001, 0);}#mermaid-figure-2 .label3{fill:hsl(210, 100%, 46.2745098039%);}#mermaid-figure-2 .arrow3{stroke:hsl(210, 100%, 46.2745098039%);}#mermaid-figure-2 .branch-label4{fill:black;}#mermaid-figure-2 .commit4{stroke:hsl(180, 100%, 46.2745098039%);fill:hsl(180, 100%, 46.2745098039%);}#mermaid-figure-2 .commit-highlight4{stroke:rgb(146.5000000001, 0, 0);fill:rgb(146.5000000001, 0, 0);}#mermaid-figure-2 .label4{fill:hsl(180, 100%, 46.2745098039%);}#mermaid-figure-2 .arrow4{stroke:hsl(180, 100%, 46.2745098039%);}#mermaid-figure-2 .branch-label5{fill:black;}#mermaid-figure-2 .commit5{stroke:hsl(150, 100%, 46.2745098039%);fill:hsl(150, 100%, 46.2745098039%);}#mermaid-figure-2 .commit-highlight5{stroke:rgb(146.5000000001, 0, 73.2500000001);fill:rgb(146.5000000001, 0, 73.2500000001);}#mermaid-figure-2 .label5{fill:hsl(150, 100%, 46.2745098039%);}#mermaid-figure-2 .arrow5{stroke:hsl(150, 100%, 46.2745098039%);}#mermaid-figure-2 .branch-label6{fill:black;}#mermaid-figure-2 .commit6{stroke:hsl(300, 100%, 46.2745098039%);fill:hsl(300, 100%, 46.2745098039%);}#mermaid-figure-2 .commit-highlight6{stroke:rgb(0, 146.5000000001, 0);fill:rgb(0, 146.5000000001, 0);}#mermaid-figure-2 .label6{fill:hsl(300, 100%, 46.2745098039%);}#mermaid-figure-2 .arrow6{stroke:hsl(300, 100%, 46.2745098039%);}#mermaid-figure-2 .branch-label7{fill:black;}#mermaid-figure-2 .commit7{stroke:hsl(0, 100%, 46.2745098039%);fill:hsl(0, 100%, 46.2745098039%);}#mermaid-figure-2 .commit-highlight7{stroke:rgb(0, 146.5000000001, 146.5000000001);fill:rgb(0, 146.5000000001, 146.5000000001);}#mermaid-figure-2 .label7{fill:hsl(0, 100%, 46.2745098039%);}#mermaid-figure-2 .arrow7{stroke:hsl(0, 100%, 46.2745098039%);}#mermaid-figure-2 .branch{stroke-width:1;stroke:#333333;stroke-dasharray:2;}#mermaid-figure-2 .commit-label{font-size:10px;fill:#000021;}#mermaid-figure-2 .commit-label-bkg{font-size:10px;fill:#ffffde;opacity:0.5;}#mermaid-figure-2 .tag-label{font-size:10px;fill:#131300;}#mermaid-figure-2 .tag-label-bkg{fill:#ECECFF;stroke:hsl(240, 60%, 86.2745098039%);}#mermaid-figure-2 .tag-hole{fill:#333;}#mermaid-figure-2 .commit-merge{stroke:#ECECFF;fill:#ECECFF;}#mermaid-figure-2 .commit-reverse{stroke:#ECECFF;fill:#ECECFF;stroke-width:3;}#mermaid-figure-2 .commit-highlight-inner{stroke:#ECECFF;fill:#ECECFF;}#mermaid-figure-2 .arrow{stroke-width:8;stroke-linecap:round;fill:none;}#mermaid-figure-2 .gitTitleText{text-anchor:middle;font-size:18px;fill:#333;}#mermaid-figure-2 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
-<g></g><g class="commit-bullets"></g><g class="commit-labels"></g><g><line class="branch branch0" y2="0" x2="300" y1="0" x1="0"></line><rect transform="translate(-19, -9.5)" height="23" width="53.25" y="-1.5" x="-69.25" ry="4" rx="4" class="branchLabelBkg label0"></rect><g class="branchLabel"><g transform="translate(-79.25, -10.5)" class="label branch-label0"><text><tspan class="row" x="0" dy="1em" space="preserve">main</tspan></text></g></g><line class="branch branch1" y2="90" x2="300" y1="90" x1="0"></line><rect transform="translate(-19, 80.5)" height="23" width="84.453125" y="-1.5" x="-100.453125" ry="4" rx="4" class="branchLabelBkg label1"></rect><g class="branchLabel"><g transform="translate(-110.453125, 79.5)" class="label branch-label1"><text><tspan class="row" x="0" dy="1em" space="preserve">new-idea</tspan></text></g></g></g><g class="commit-arrows"><path class="arrow arrow0" d="M 10 0 L 60 0"></path><path class="arrow arrow1" d="M 60 0 L 60 70 A 20 20, 0, 0, 0, 80 90 L 110 90"></path><path class="arrow arrow1" d="M 110 90 L 160 90"></path><path class="arrow arrow0" d="M 60 0 L 210 0"></path><path class="arrow arrow1" d="M 160 90 L 190 90 A 20 20, 0, 0, 0, 210 70 L 210 0"></path><path class="arrow arrow0" d="M 210 0 L 260 0"></path></g><g class="commit-bullets"><circle class="commit 0-2fa1a80 commit0" r="10" cy="0" cx="10"></circle><circle class="commit 1-370448d commit0" r="10" cy="0" cx="60"></circle><circle class="commit 2-a597b4a commit1" r="10" cy="90" cx="110"></circle><circle class="commit 3-e90a181 commit1" r="10" cy="90" cx="160"></circle><circle class="commit 4-df7f00a commit0" r="9" cy="0" cx="210"></circle><circle class="commit commit-merge 4-df7f00a commit0" r="6" cy="0" cx="210"></circle><circle class="commit 5-23c36ae commit0" r="10" cy="0" cx="260"></circle></g><g class="commit-labels"><g transform="translate(-28.34396484375, 25.24986328125) rotate(-45, 0, 0)"><rect height="15" width="48.8525390625" y="13.5" x="-14.42626953125" class="commit-label-bkg"></rect><text class="commit-label" y="25" x="-12.42626953125">0-2fa1a80</text></g><g transform="translate(-28.924726562500002, 25.7694921875) rotate(-45, 50, 0)"><rect height="15" width="50.380859375" y="13.5" x="34.8095703125" class="commit-label-bkg"></rect><text class="commit-label" y="25" x="36.8095703125">1-370448d</text></g><g transform="translate(-29.052753906249997, 25.884042968750002) rotate(-45, 100, 90)"><rect height="15" width="50.7177734375" y="103.5" x="84.64111328125" class="commit-label-bkg"></rect><text class="commit-label" y="115" x="86.64111328125">2-a597b4a</text></g><g transform="translate(-28.7265625, 25.5921875) rotate(-45, 150, 90)"><rect height="15" width="49.859375" y="103.5" x="135.0703125" class="commit-label-bkg"></rect><text class="commit-label" y="115" x="137.0703125">3-e90a181</text></g><g transform="translate(-28.817109375, 25.673203125) rotate(-45, 250, 0)"><rect height="15" width="50.09765625" y="13.5" x="234.951171875" class="commit-label-bkg"></rect><text class="commit-label" y="25" x="236.951171875">5-23c36ae</text></g></g>
+<g></g><g class="commit-bullets"></g><g class="commit-labels"></g><g><line class="branch branch0" y2="0" x2="300" y1="0" x1="0"></line><rect transform="translate(-19, -9.5)" height="23" width="53.25" y="-1.5" x="-69.25" ry="4" rx="4" class="branchLabelBkg label0"></rect><g class="branchLabel"><g transform="translate(-79.25, -10.5)" class="label branch-label0"><text><tspan class="row" x="0" dy="1em" space="preserve">main</tspan></text></g></g><line class="branch branch1" y2="90" x2="300" y1="90" x1="0"></line><rect transform="translate(-19, 80.5)" height="23" width="84.453125" y="-1.5" x="-100.453125" ry="4" rx="4" class="branchLabelBkg label1"></rect><g class="branchLabel"><g transform="translate(-110.453125, 79.5)" class="label branch-label1"><text><tspan class="row" x="0" dy="1em" space="preserve">new-idea</tspan></text></g></g></g><g class="commit-arrows"><path class="arrow arrow0" d="M 10 0 L 60 0"></path><path class="arrow arrow1" d="M 60 0 L 60 70 A 20 20, 0, 0, 0, 80 90 L 110 90"></path><path class="arrow arrow1" d="M 110 90 L 160 90"></path><path class="arrow arrow0" d="M 60 0 L 210 0"></path><path class="arrow arrow1" d="M 160 90 L 190 90 A 20 20, 0, 0, 0, 210 70 L 210 0"></path><path class="arrow arrow0" d="M 210 0 L 260 0"></path></g><g class="commit-bullets"><circle class="commit 0-45608aa commit0" r="10" cy="0" cx="10"></circle><circle class="commit 1-03442c9 commit0" r="10" cy="0" cx="60"></circle><circle class="commit 2-cf24ea0 commit1" r="10" cy="90" cx="110"></circle><circle class="commit 3-8eb08ff commit1" r="10" cy="90" cx="160"></circle><circle class="commit 4-577bae2 commit0" r="9" cy="0" cx="210"></circle><circle class="commit commit-merge 4-577bae2 commit0" r="6" cy="0" cx="210"></circle><circle class="commit 5-90a1d62 commit0" r="10" cy="0" cx="260"></circle></g><g class="commit-labels"><g transform="translate(-28.9284375, 25.7728125) rotate(-45, 0, 0)"><rect height="15" width="50.390625" y="13.5" x="-15.1953125" class="commit-label-bkg"></rect><text class="commit-label" y="25" x="-13.1953125">0-45608aa</text></g><g transform="translate(-28.813398437500002, 25.6698828125) rotate(-45, 50, 0)"><rect height="15" width="50.087890625" y="13.5" x="34.9560546875" class="commit-label-bkg"></rect><text class="commit-label" y="25" x="36.9560546875">1-03442c9</text></g><g transform="translate(-28.3087109375, 25.218320312499998) rotate(-45, 100, 90)"><rect height="15" width="48.759765625" y="103.5" x="85.6201171875" class="commit-label-bkg"></rect><text class="commit-label" y="115" x="87.6201171875">2-cf24ea0</text></g><g transform="translate(-28.16064453125, 25.08583984375) rotate(-45, 150, 90)"><rect height="15" width="48.3701171875" y="103.5" x="135.81494140625" class="commit-label-bkg"></rect><text class="commit-label" y="115" x="137.81494140625">3-8eb08ff</text></g><g transform="translate(-29.052753906249997, 25.884042968750002) rotate(-45, 250, 0)"><rect height="15" width="50.7177734375" y="13.5" x="234.64111328125" class="commit-label-bkg"></rect><text class="commit-label" y="25" x="236.64111328125">5-90a1d62</text></g></g>
 </svg>
 </div>
 <p></p></figure><p></p>
