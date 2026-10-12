@@ -45,7 +45,7 @@ editor_options:
 ::: {.grid3}
 ::: {.card}
 [Why]{.card-title}
-Why use Git and GitHub?
+Why use Git and GitHub, for the lab and for you?
 :::
 
 ::: {.card}
@@ -77,7 +77,45 @@ No prior experience needed. Ask questions at any time!
 
 # Why bother? {background-color="#191970"}
 
-## Sound familiar?
+## The lab's view: one repo per project
+
+All our projects live on [**github.com/RealityBending**](https://github.com/RealityBending)
+
+- Every project has **its own repository**
+- All repos are **organised the same way**, so anyone can find anything
+- Everything in one place: **code, data, documents and paper**
+- A full history of every change, and easy to **share** when we publish
+
+## How our repos are organised
+
+::: {.grid2}
+::: {.card .gh .fragment}
+[`analysis/`]{.card-title}
+The analysis scripts
+:::
+
+::: {.card .gh .fragment}
+[`data/`]{.card-title}
+The **anonymised** data, ready to analyse
+:::
+
+::: {.card .gh .fragment}
+[`documents/`]{.card-title}
+The approved ethics (PDF) and ethics documents, e.g., the questionnaires we use as PDFs
+:::
+
+::: {.card .git .fragment}
+[`paper/`]{.card-title}
+Eventually: the manuscript (written in R), with a folder for each journal we submit to
+:::
+:::
+
+::: {.callout-important .fragment}
+## Where is the raw data?
+The **raw** data stays on **Box**. A **pre-processing script** anonymises it and saves the anonymised version in the repo's `data/` folder.
+:::
+
+## Your view: sound familiar?
 
 :::: {.columns}
 
