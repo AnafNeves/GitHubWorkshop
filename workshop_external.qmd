@@ -89,7 +89,7 @@ All our projects live on [**github.com/RealityBending**](https://github.com/Real
 
 ## How our repos are organised
 
-::: {.grid2}
+::: {.grid3}
 ::: {.card .gh .fragment}
 [`analysis/`]{.card-title}
 The analysis scripts
@@ -103,6 +103,11 @@ The **anonymised** data, ready to analyse
 ::: {.card .gh .fragment}
 [`documents/`]{.card-title}
 The approved ethics (PDF) and ethics documents, e.g., the questionnaires we use as PDFs
+:::
+
+::: {.card .gh .fragment}
+[`experiment/`]{.card-title}
+The scripts for our experiments, created with [jsPsych](https://www.jspsych.org), and our **stimuli**
 :::
 
 ::: {.card .git .fragment}
@@ -260,9 +265,13 @@ With GitHub Pages (e.g., [The REBEL lab](https://realitybendinglab.com/))
 
 ::: {.column width="70%"}
 ::: {.r-stack}
+::: {.fragment .fade-out fragment-index=4}
 ![](images/repos_folders.png){.fragment fragment-index=2}
+:::
 
+::: {.fragment .fade-out fragment-index=8}
 ![](images/GithubDesktop_repo.png){.fragment fragment-index=4}
+:::
 
 ![](images/repo_history.png){.fragment fragment-index=8}
 :::
@@ -326,9 +335,15 @@ A **fork** is a copy of a repository under **your** account. Use it when you **c
 
 ::: {.column width="70%"}
 ::: {.r-stack}
-![](images/fork_ty.png){.fragment fragment-index=2}
+::: {.fragment .fade-out fragment-index=4}
+![](images/Repo_C.png){.fragment fragment-index=2}
+:::
 
-![](images/create_fork.png){.fragment fragment-index=4}
+::: {.fragment .fade-out fragment-index=5}
+![](images/create_fork_C.png){.fragment fragment-index=4}
+:::
+
+![](images/my_fork_C.png){.fragment fragment-index=5}
 :::
 :::
 
@@ -350,19 +365,44 @@ In GitHub Desktop:
 
 [2. Choose the **URL** tab and paste **your fork's** URL (it has *your* username)]{.fragment fragment-index=3}
 
-[3. Choose a **Local path** and click **Clone**]{.fragment fragment-index=5}
+[3. Choose a **Local path** (not in OneDrive!) and click **Clone**]{.fragment fragment-index=5}
+
+[4. GitHub Desktop asks how you'll use the fork: choose **To contribute to the parent project**]{.fragment fragment-index=7}
 :::
 :::
 
 ::: {.column width="60%"}
 ::: {.r-stack}
-![](images/clone_repo.png){.fragment fragment-index=2}
+::: {.fragment .fade-out fragment-index=4}
+![](images/clone_fork_C.png){.fragment fragment-index=2}
+:::
 
-![](images/clone_fork.png){.fragment fragment-index=4}
+::: {.fragment .fade-out fragment-index=8}
+![](images/clone_repo_C.png){.fragment fragment-index=4}
+:::
+
+![](images/pop_out_fork.png){.fragment fragment-index=8 width="62%"}
 :::
 :::
 
 ::::
+
+::: {.callout-note .fragment fragment-index=9}
+## Which option?
+**To contribute to the parent project:** pull requests, issues and new branches point to the **original** repo, so your changes can go back to it.
+<br>**For my own purposes:** everything points to **your fork**, as if it were your own separate project.
+:::
+
+## Where to keep your repo
+
+::: {.callout-warning}
+## Not in OneDrive (or Box)
+OneDrive has its **own syncing and version control**, which can clash with Git and **lose your work**.
+:::
+
+- Save your repos in a **normal folder on your computer**, e.g., a `GitHub` folder on your Desktop
+- Check the **Local path** when you clone: it should **not** include `OneDrive`
+- On some university computers the Desktop itself is synced to OneDrive, so check the path even there
 
 ## 3. Commit your changes
 
@@ -384,9 +424,11 @@ In GitHub Desktop:
 
 ::: {.column width="70%"}
 ::: {.r-stack}
-![](images/edit_repo.png){.fragment fragment-index=2}
+::: {.fragment .fade-out fragment-index=7}
+![](images/change_fork_C.png){.fragment fragment-index=2}
+:::
 
-![](images/commit_push.png){.fragment fragment-index=7}
+![](images/commit_changes_C.png){.fragment fragment-index=7}
 :::
 :::
 
@@ -434,13 +476,15 @@ Future you will thank you!
 ::: {.nonincremental}
 [1. Click **Push origin**]{.fragment fragment-index=1}
 
-[2. Refresh **your fork** on github.com: your changes are there]{.fragment fragment-index=2}
+[2. Refresh **your fork** on github.com: your changes are there]{.fragment fragment-index=3}
 :::
 :::
 
 ::: {.column width="70%"}
 ::: {.r-stack}
-![](images/github_changes.png){.fragment fragment-index=3}
+![](images/commit_changes_C.png){.fragment fragment-index=2}
+
+![](images/fork_c_github.png){.fragment fragment-index=4}
 :::
 :::
 
@@ -464,9 +508,15 @@ A **pull request** (PR) asks the owner of the original repo to add your changes.
 
 ::: {.column width="60%"}
 ::: {.r-stack}
-![](images/pr_fork.png){.fragment fragment-index=2}
+::: {.fragment .fade-out fragment-index=4}
+![](images/pr_fork_C.png){.fragment fragment-index=2}
+:::
 
-![](images/pr_repo.png){.fragment fragment-index=4}
+::: {.fragment .fade-out fragment-index=5}
+![](images/pr_repo_C.png){.fragment fragment-index=4}
+:::
+
+![](images/pr_comment_C.png){.fragment fragment-index=5}
 :::
 :::
 
@@ -490,11 +540,11 @@ The original repo keeps changing. Before you start working:
 
 ::: {.column width="60%"}
 ::: {.r-stack}
-![](images/sync_fork.png){.fragment fragment-index=2}
+::: {.fragment .fade-out fragment-index=4}
+![](images/sync_fork_C.png){.fragment fragment-index=2}
+:::
 
-![](images/fetch_push.png){.fragment fragment-index=4}
-
-![](images/pull_changes.png){.fragment fragment-index=6}
+![](images/fork_c_desktop.png){.fragment fragment-index=4}
 :::
 :::
 
@@ -550,7 +600,9 @@ On [github.com](https://github.com):
 
 ::: {.column width="70%"}
 ::: {.r-stack}
+::: {.fragment .fade-out fragment-index=4}
 ![](images/new_repo.png){.fragment fragment-index=2}
+:::
 
 ![](images/new_repo_name.png){.fragment fragment-index=4}
 :::

@@ -109,3 +109,10 @@ $col-soft: #f4f5fa;
 // ---- Tables -------------------------------------------------------------------
 .reveal table { font-size: 0.85em; }
 .reveal table th { border-bottom: 3px solid $col-accent; }
+
+// Screenshots that fade out when the next one appears: no extra spacing
+.reveal .r-stack > div > p,
+.reveal .r-stack > div > figure,
+.reveal .r-stack > p {
+  margin: 0;
+}
