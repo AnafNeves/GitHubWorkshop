@@ -19,6 +19,7 @@ format:
     code-line-numbers: false
     fontsize: "170%"
     mermaid-format: svg
+    theme: [default, workshop.scss]
     # theme: blood
     # title-slide-attributes:
     #   data-background-color: "#1A3F82"
@@ -27,9 +28,13 @@ editor_options:
 ---
 
 <!--
-  Colours used throughout:
-    Git    = #F05032 (orange, from the Git logo)
-    GitHub = #191970 (midnight blue)
+  Styles live in workshop.scss. Useful classes:
+    [word]{.git} / [word]{.gh}     orange Git / blue GitHub words
+    [word]{.good} / [word]{.bad}   green / red words
+    [phrase]{.hl}                  highlighter-pen effect
+    ::: {.card} ... :::            soft box (add .git, .gh, .good or .bad for the top colour)
+    ::: {.grid2} / {.grid3}        put cards side by side
+    ::: {.keybox} ... :::          key message box
 
   Screenshots sit inside the bullet they belong to, so they appear on the
   same click. Each one covers the previous one in the same spot on the right.
@@ -37,18 +42,38 @@ editor_options:
 
 ## Today
 
-::: {.nonincremental}
+::: {.grid3}
+::: {.card}
+[Why]{.card-title}
+Why use Git and GitHub?
+:::
 
-1. **Why** use Git and GitHub?
-2. **Key ideas**: the words you'll hear
-3. **Getting set up** with GitHub Desktop
-4. **The workflow**: fork, commit, push, pull request
-5. **Hands-on**: add a memory to the REBEL website
+::: {.card}
+[Key ideas]{.card-title}
+The words you'll hear
+:::
+
+::: {.card}
+[Set up]{.card-title}
+GitHub Desktop
+:::
+
+::: {.card .git}
+[The workflow]{.card-title}
+Fork, commit, push, pull request
+:::
+
+::: {.card .gh}
+[Hands-on]{.card-title}
+Add a memory to the REBEL website
+:::
 :::
 
 . . .
 
+::: {.keybox}
 No prior experience needed. Ask questions at any time!
+:::
 
 # Why bother? {background-color="#191970"}
 
@@ -57,32 +82,57 @@ No prior experience needed. Ask questions at any time!
 :::: {.columns}
 
 ::: {.column width="50%"}
-**Without Git**
+::: {.card .bad}
+[Without Git]{.card-title}
 
 - `analysis.R`
 - `analysis_v2.R`
 - `analysis_v2_final.R`
 - `analysis_v2_final_REALLY.R`
-- `analysis_USE_THIS_ONE.R` 
+- `analysis_USE_THIS_ONE.R`
+:::
 :::
 
 ::: {.column width="50%"}
-**With Git**
+::: {.card .good}
+[With Git]{.card-title}
 
 - One file: `analysis.R`
 - Every version saved, with a note on **what** changed and **why**
 - Go back to any point in time
+:::
 :::
 
 ::::
 
 ## What you get
 
-- **A backup** of your work in the cloud
-- **A time machine**: undo mistakes, see old versions
-- **Teamwork** without overwriting each other
-- **Open science**: share code and data with one link
-- **Free websites** with GitHub Pages (e.g., [The REBEL lab](https://realitybendinglab.com/))
+::: {.grid3}
+::: {.card .fragment}
+[A backup]{.card-title}
+Your work, safe in the cloud
+:::
+
+::: {.card .fragment}
+[A time machine]{.card-title}
+Undo mistakes, see old versions
+:::
+
+::: {.card .fragment}
+[Teamwork]{.card-title}
+No more overwriting each other
+:::
+
+::: {.card .fragment}
+[Open science]{.card-title}
+Share code and data with one link
+:::
+
+::: {.card .fragment}
+[Free websites]{.card-title}
+With GitHub Pages (e.g., [The REBEL lab](https://realitybendinglab.com/))
+:::
+:::
 
 # Key ideas {background-color="#191970"}
 
@@ -91,19 +141,23 @@ No prior experience needed. Ask questions at any time!
 :::: {.columns}
 
 ::: {.column width="50%"}
-[**Git**]{style="color: #F05032;"}
+::: {.card .git}
+[[Git]{.git}]{.card-title}
 
 - A **program**
 - Installed on **your computer**
 - Tracks every change to your files (*version control*)
 :::
+:::
 
 ::: {.column width="50%"}
-[**GitHub**]{style="color: #191970;"}
+::: {.card .gh}
+[[GitHub]{.gh}]{.card-title}
 
 - A **website**
 - Stores your projects **online** (in the cloud)
 - For sharing and collaborating
+:::
 :::
 ::::
 
@@ -112,12 +166,12 @@ No prior experience needed. Ask questions at any time!
 | | The engine | The friendly interface |
 |---|---|---|
 | **Analysing data** | R | RStudio |
-| **Version control** | [Git]{style="color: #F05032;"} | [GitHub Desktop]{style="color: #191970;"} |
+| **Version control** | [Git]{.git} | [GitHub Desktop]{.gh} |
 <br><br>
 
 - The **engine** does the work; the **interface** gives you buttons instead of commands
 - GitHub Desktop comes with Git built in, so you only install **one** thing
-- [GitHub]{style="color: #191970;"} (the website) is where your projects live online
+- [GitHub]{.gh} (the website) is where your projects live online
 
 ## Vocabulary
 
@@ -176,6 +230,27 @@ No prior experience needed. Ask questions at any time!
 
 # The workflow {background-color="#191970"}
 
+## Clone, fork or branch?
+
+There are different ways to work with a repository:
+
+::: {.grid3}
+::: {.card .fragment}
+[Clone]{.card-title}
+A copy **from GitHub to your computer**
+:::
+
+::: {.card .gh .fragment}
+[Fork]{.card-title}
+A copy **on GitHub**, under **your** account
+:::
+
+::: {.card .git .fragment}
+[Branch]{.card-title}
+A parallel line of work **inside the same repo**
+:::
+:::
+
 ## The big picture
 
 ```{mermaid}
@@ -189,8 +264,8 @@ flowchart LR
 
 . . .
 
-::: {.callout-tip}
-Commit little and often. Push at least at the **end of every day**.
+::: {.keybox}
+Commit [little and often]{.hl}. Push at least at the **end of every day**.
 :::
 
 ## 1. Fork the repo
@@ -217,7 +292,9 @@ A **fork** is a copy of a repository under **your** account. Use it when you **c
 
 ::::
 
-- You now have your own copy: whatever you do there, the original stays untouched
+::: {.keybox}
+You now have [your own copy]{.hl}: whatever you do there, the original stays untouched.
+:::
 
 ## 2. Clone your fork
 
@@ -273,33 +350,39 @@ In GitHub Desktop:
 
 ::::
 
-## Good vs bad commit messages {.smaller}
+## Good vs bad commit messages
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-❌ **Bad**
+::: {.card .bad}
+[Bad]{.card-title}
 
 - `update`
 - `stuff`
 - `asdfgh`
 - `final version`
 :::
+:::
 
 ::: {.column width="50%"}
-✅ **Good**
+::: {.card .good}
+[Good]{.card-title}
 
 - `Add age to demographics table`
 - `Fix typo in methods section`
 - `Remove outliers above 3 SD`
 - `Update figure 2 colours`
 :::
+:::
 
 ::::
 
 . . .
 
-> Future you will thank you!
+::: {.keybox}
+Future you will thank you!
+:::
 
 ## 4. Push to your fork
 
@@ -309,7 +392,7 @@ In GitHub Desktop:
 ::: {.nonincremental}
 [1. Click **Push origin**]{.fragment fragment-index=1}
 
-[2. Refresh **your fork** on github.com: your changes are there 🎉]{.fragment fragment-index=2}
+[2. Refresh **your fork** on github.com: your changes are there]{.fragment fragment-index=2}
 :::
 :::
 
@@ -331,9 +414,9 @@ A **pull request** (PR) asks the owner of the original repo to add your changes.
 ::: {.nonincremental}
 [1. On github.com, go to **your fork** ➜ **Pull requests** ➜ **New pull request**]{.fragment fragment-index=1}
 
-[2. Check the arrow: **base** = the original ⬅ **head** = your fork, then click **Create pull request**]{.fragment fragment-index=3}
+[2. Check the arrow: **base** = the original ← **head** = your fork, then click **Create pull request**]{.fragment fragment-index=3}
 
-[3. The owner reviews, comments 💬 and **merges** ✅]{.fragment fragment-index=5}
+[3. The owner reviews, comments and **merges**]{.fragment fragment-index=5}
 :::
 :::
 
@@ -375,14 +458,16 @@ The original repo keeps changing. Before you start working:
 
 ::::
 
-::: {.fragment fragment-index=7}
-> In GitHub Desktop, **origin** means **your fork**, not the original repo. So **Pull origin** only downloads what's already on your fork. If your fork is behind the original, there's nothing new on it to pull. **Sync fork** brings your fork up to date with the original first. Then **Pull origin** brings those changes down to your computer.
+::: {.keybox .fragment fragment-index=7}
+In GitHub Desktop, **origin** means **your fork**, not the original repo. So **Pull origin** only downloads what's already on your fork. If your fork is behind the original, there's nothing new on it to pull. **Sync fork** brings your fork up to date with the original first. Then **Pull origin** brings those changes down to your computer.
 :::
 
 
 ## Files you shouldn't share
 
+::: {.keybox}
 Large data, outputs, passwords...
+:::
 
 - In the **Changes** tab, right-click the file
 - Choose **Ignore file** (or **Ignore all .xxx files**)
@@ -408,7 +493,7 @@ Large data, outputs, passwords...
 
 [6. **Commit** with a good message and **push** to your fork]{.fragment fragment-index=7}
 
-[7. Open a **pull request** to `RealityBending/RealityBending.github.io` 🎉]{.fragment fragment-index=8}
+[7. Open a **pull request** to `RealityBending/RealityBending.github.io`]{.fragment fragment-index=8}
 :::
 :::
 
@@ -488,8 +573,8 @@ gitGraph
 
 . . .
 
-::: {.callout-tip}
-Git never forgets: reverting adds a new snapshot that cancels the old one.
+::: {.keybox}
+[Git never forgets]{.hl}: reverting adds a new snapshot that cancels the old one.
 :::
 
 ## When things go wrong {.smaller}
