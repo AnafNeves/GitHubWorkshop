@@ -532,19 +532,23 @@ The original repo keeps changing. Before you start working:
 ::: {.nonincremental}
 [1. On github.com, open **your fork** and click **Sync fork ➜ Update branch**]{.fragment fragment-index=1}
 
-[2. In GitHub Desktop, click **Fetch origin**]{.fragment fragment-index=3}
+[2. In GitHub Desktop, click **Fetch origin**]{.fragment fragment-index=4}
 
-[3. If there's anything new, click **Pull origin**]{.fragment fragment-index=5}
+[3. If there's anything new, click **Pull origin**]{.fragment fragment-index=6}
 :::
 :::
 
 ::: {.column width="60%"}
 ::: {.r-stack}
-::: {.fragment .fade-out fragment-index=4}
+::: {.fragment .fade-out fragment-index=3}
 ![](images/sync_fork_C.png){.fragment fragment-index=2}
 :::
 
-![](images/fork_c_desktop.png){.fragment fragment-index=4}
+::: {.fragment .fade-out fragment-index=5}
+![](images/sync_message_C.png){.fragment fragment-index=3}
+:::
+
+![](images/pull_c_desktop.png){.fragment fragment-index=5}
 :::
 :::
 
