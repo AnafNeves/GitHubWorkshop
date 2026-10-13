@@ -482,7 +482,9 @@ Future you will thank you!
 
 ::: {.column width="70%"}
 ::: {.r-stack}
+::: {.fragment .fade-out fragment-index=4}
 ![](images/commit_changes_C.png){.fragment fragment-index=2}
+:::
 
 ![](images/fork_c_github.png){.fragment fragment-index=4}
 :::
