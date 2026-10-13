@@ -580,6 +580,30 @@ On [github.com](https://github.com):
 
 - Then clone it, commit and push as usual: no fork needed, it's yours!
 
+## Going back in time {.smaller}
+
+| What happened | What to do in GitHub Desktop |
+|---|---|
+| Changed a file, **not committed** | **Changes** ➜ right-click file ➜ **Discard changes** |
+| Committed, **not pushed** | **History** ➜ right-click commit ➜ **Undo commit** |
+| Already **pushed** | **History** ➜ right-click commit ➜ **Revert changes in commit** ➜ **Push** |
+| Just want to **look** at an old version | github.com ➜ open the file ➜ **History** |
+
+. . .
+
+::: {.keybox}
+[Git never forgets]{.hl}: reverting adds a new snapshot that cancels the old one.
+:::
+
+## When things go wrong {.smaller}
+
+| Problem | What to do |
+|---------|-----------|
+| Push is rejected | Someone else pushed first: **Pull**, then **Push** again |
+| Conflict (same lines changed by two people) | GitHub Desktop shows the files: pick which version to keep, then commit |
+| Committed the wrong thing | **History** ➜ right-click the commit ➜ **Revert changes in commit** |
+| File too big | Don't commit it: **Ignore** it instead |
+
 ## Branch or fork? {.smaller}
 
 | | Branch | Fork |
@@ -606,30 +630,6 @@ gitGraph
 
 - **Current branch ➜ New branch**, then **Publish branch**
 - `main` stays safe while you experiment
-
-## Going back in time {.smaller}
-
-| What happened | What to do in GitHub Desktop |
-|---|---|
-| Changed a file, **not committed** | **Changes** ➜ right-click file ➜ **Discard changes** |
-| Committed, **not pushed** | **History** ➜ right-click commit ➜ **Undo commit** |
-| Already **pushed** | **History** ➜ right-click commit ➜ **Revert changes in commit** ➜ **Push** |
-| Just want to **look** at an old version | github.com ➜ open the file ➜ **History** |
-
-. . .
-
-::: {.keybox}
-[Git never forgets]{.hl}: reverting adds a new snapshot that cancels the old one.
-:::
-
-## When things go wrong {.smaller}
-
-| Problem | What to do |
-|---------|-----------|
-| Push is rejected | Someone else pushed first: **Pull**, then **Push** again |
-| Conflict (same lines changed by two people) | GitHub Desktop shows the files: pick which version to keep, then commit |
-| Committed the wrong thing | **History** ➜ right-click the commit ➜ **Revert changes in commit** |
-| File too big | Don't commit it: **Ignore** it instead |
 
 ## Resources
 
