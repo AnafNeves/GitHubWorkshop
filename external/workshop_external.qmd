@@ -19,7 +19,7 @@ format:
     code-line-numbers: false
     fontsize: "170%"
     mermaid-format: svg
-    theme: [default, workshop.scss]
+    theme: [default, ../workshop.scss]
     # theme: blood
     # title-slide-attributes:
     #   data-background-color: "#1A3F82"
@@ -28,7 +28,7 @@ editor_options:
 ---
 
 <!--
-  Styles live in workshop.scss. Useful classes:
+  Styles live in ../workshop.scss. Useful classes:
     [word]{.git} / [word]{.gh}     orange Git / blue GitHub words
     [word]{.desk}                  purple GitHub Desktop words
     [word]{.good} / [word]{.bad}   green / red words
@@ -46,7 +46,7 @@ editor_options:
 ::: {.grid3}
 ::: {.card}
 [Why]{.card-title}
-Why use Git and GitHub?
+Why use Git and GitHub, for the lab and for you?
 :::
 
 ::: {.card}
@@ -66,7 +66,7 @@ Fork, commit, push, pull request
 
 ::: {.card .gh}
 [Hands-on]{.card-title}
-Add a memory to the REBEL website
+Fork a real project and send a pull request
 :::
 :::
 
@@ -78,7 +78,50 @@ No prior experience needed. Ask questions at any time!
 
 # Why bother? {background-color="#191970"}
 
-## Sound familiar?
+## The lab's view: one repo per project
+
+All our projects live on [**github.com/RealityBending**](https://github.com/RealityBending)
+
+- Every project has **its own repository**
+- All repos are **organised the same way**, so anyone can find anything
+- Everything in one place: **code, data, documents and paper**
+- A full history of every change, and easy to **share** when we publish
+
+## How our repos are organised
+
+::: {.grid3}
+::: {.card .gh .fragment}
+[`analysis/`]{.card-title}
+The analysis scripts
+:::
+
+::: {.card .gh .fragment}
+[`data/`]{.card-title}
+The **anonymised** data, ready to analyse
+:::
+
+::: {.card .gh .fragment}
+[`documents/`]{.card-title}
+The approved ethics (PDF) and ethics documents, e.g., the questionnaires we use as PDFs
+:::
+
+::: {.card .gh .fragment}
+[`experiment/`]{.card-title}
+The scripts for our experiments, created with [jsPsych](https://www.jspsych.org), and our **stimuli**
+:::
+
+::: {.card .git .fragment}
+[`paper/`]{.card-title}
+Eventually: the manuscript (written in R), with a folder for each journal we submit to
+:::
+:::
+
+::: {.callout-important .fragment}
+## Where is the raw data?
+The **raw** data stays on **Box**. A **pre-processing script** anonymises it and saves the anonymised version in the repo's `data/` folder.
+:::
+
+## Your view: sound familiar?
 
 :::: {.columns}
 
@@ -293,10 +336,14 @@ A **fork** is a copy of a repository under **your** account. Use it when you **c
 ::: {.column width="70%"}
 ::: {.r-stack}
 ::: {.fragment .fade-out fragment-index=4}
-![](images/fork_ty.png){.fragment fragment-index=2}
+![](images/Repo_C.png){.fragment fragment-index=2}
 :::
 
-![](images/create_fork.png){.fragment fragment-index=4}
+::: {.fragment .fade-out fragment-index=5}
+![](images/create_fork_C.png){.fragment fragment-index=4}
+:::
+
+![](images/my_fork_C.png){.fragment fragment-index=5}
 :::
 :::
 
@@ -327,11 +374,11 @@ In GitHub Desktop:
 ::: {.column width="60%"}
 ::: {.r-stack}
 ::: {.fragment .fade-out fragment-index=4}
-![](images/clone_repo.png){.fragment fragment-index=2}
+![](images/clone_fork_C.png){.fragment fragment-index=2}
 :::
 
 ::: {.fragment .fade-out fragment-index=8}
-![](images/clone_fork.png){.fragment fragment-index=4}
+![](images/clone_repo_C.png){.fragment fragment-index=4}
 :::
 
 ![](images/pop_out_fork.png){.fragment fragment-index=8 width="62%"}
@@ -378,10 +425,10 @@ OneDrive has its **own syncing and version control**, which can clash with Git a
 ::: {.column width="70%"}
 ::: {.r-stack}
 ::: {.fragment .fade-out fragment-index=7}
-![](images/edit_repo.png){.fragment fragment-index=2}
+![](images/change_fork_C.png){.fragment fragment-index=2}
 :::
 
-![](images/commit_push.png){.fragment fragment-index=7}
+![](images/commit_changes_C.png){.fragment fragment-index=7}
 :::
 :::
 
@@ -429,13 +476,17 @@ Future you will thank you!
 ::: {.nonincremental}
 [1. Click **Push origin**]{.fragment fragment-index=1}
 
-[2. Refresh **your fork** on github.com: your changes are there]{.fragment fragment-index=2}
+[2. Refresh **your fork** on github.com: your changes are there]{.fragment fragment-index=3}
 :::
 :::
 
 ::: {.column width="70%"}
 ::: {.r-stack}
-![](images/github_changes.png){.fragment fragment-index=3}
+::: {.fragment .fade-out fragment-index=4}
+![](images/commit_changes_C.png){.fragment fragment-index=2}
+:::
+
+![](images/fork_c_github.png){.fragment fragment-index=4}
 :::
 :::
 
@@ -460,10 +511,14 @@ A **pull request** (PR) asks the owner of the original repo to add your changes.
 ::: {.column width="60%"}
 ::: {.r-stack}
 ::: {.fragment .fade-out fragment-index=4}
-![](images/pr_fork.png){.fragment fragment-index=2}
+![](images/pr_fork_C.png){.fragment fragment-index=2}
 :::
 
-![](images/pr_repo.png){.fragment fragment-index=4}
+::: {.fragment .fade-out fragment-index=5}
+![](images/pr_repo_C.png){.fragment fragment-index=4}
+:::
+
+![](images/pr_comment_C.png){.fragment fragment-index=5}
 :::
 :::
 
@@ -479,23 +534,23 @@ The original repo keeps changing. Before you start working:
 ::: {.nonincremental}
 [1. On github.com, open **your fork** and click **Sync fork ➜ Update branch**]{.fragment fragment-index=1}
 
-[2. In GitHub Desktop, click **Fetch origin**]{.fragment fragment-index=3}
+[2. In GitHub Desktop, click **Fetch origin**]{.fragment fragment-index=4}
 
-[3. If there's anything new, click **Pull origin**]{.fragment fragment-index=5}
+[3. If there's anything new, click **Pull origin**]{.fragment fragment-index=6}
 :::
 :::
 
 ::: {.column width="60%"}
 ::: {.r-stack}
-::: {.fragment .fade-out fragment-index=4}
-![](images/sync_fork.png){.fragment fragment-index=2}
+::: {.fragment .fade-out fragment-index=3}
+![](images/sync_fork_C.png){.fragment fragment-index=2}
 :::
 
-::: {.fragment .fade-out fragment-index=6}
-![](images/fetch_push.png){.fragment fragment-index=4}
+::: {.fragment .fade-out fragment-index=5}
+![](images/sync_message_C.png){.fragment fragment-index=3}
 :::
 
-![](images/pull_changes.png){.fragment fragment-index=6}
+![](images/pull_c_desktop.png){.fragment fragment-index=5}
 :::
 :::
 
@@ -518,33 +573,16 @@ Large data, outputs, passwords...
 
 # Hands-on {background-color="#191970"}
 
-## Your turn: add a memory to the REBEL website
+## Your turn: fork a real project
 
-:::: {.columns}
-
-::: {.column width="40%"}
 ::: {.nonincremental}
-[1. **Fork** the [REBEL website repo](https://github.com/RealityBending/RealityBending.github.io)]{.fragment fragment-index=1}
-
-[2. **Clone** your fork with GitHub Desktop]{.fragment fragment-index=2}
-
-[3. Open the image folder under the memories folder]{.fragment fragment-index=3}
-
-[4. Add an image from the dinner/pub from last Monday (follow the same naming specification)]{.fragment fragment-index=4}
-
-[5. Open the `memories_manifest.json` file and add the information about the image]{.fragment fragment-index=5}
-
-[6. **Commit** with a good message and **push** to your fork]{.fragment fragment-index=7}
-
-[7. Open a **pull request** to `RealityBending/RealityBending.github.io`]{.fragment fragment-index=8}
+1. **Fork** the [Biosignals-2 repo](https://github.com/cmdaoust/Biosignals-2)
+2. **Clone** your fork with GitHub Desktop
+3. Have a look around: `analysis/`, `experiment/`, `protocol_instructions/`
+4. Make a small change, e.g., add a sentence to `README.md`
+5. **Commit** with a good message and **push** to your fork
+6. Open a **pull request** to `cmdaoust/Biosignals-2`
 :::
-:::
-
-::: {.column width="60%"}
-![](images/memories_exercise.png){.fragment fragment-index=6}
-:::
-
-::::
 
 # Extras {background-color="#191970"}
 
