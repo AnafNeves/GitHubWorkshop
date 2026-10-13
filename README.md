@@ -6,8 +6,8 @@ There are two versions of the workshop:
 
 | Workshop | For | Slides |
 |---|---|---|
-| **Internal** | Members of the Reality Bending Lab | 👉 **[View the internal slides](https://anafneves.github.io/Github_Workshop/internal/workshop_internal.html)** |
-| **External** | Members of Liat's Lab| 👉 **[View the external slides](https://anafneves.github.io/Github_Workshop/external/workshop_external.html)** |
+| **Internal** | Members of the Reality Bending Lab | 👉 **[View the internal slides](https://anafneves.github.io/GitHubWorkshop/internal/workshop_internal.html)** |
+| **External** | Members of Liat's Lab| 👉 **[View the external slides](https://anafneves.github.io/GitHubWorkshop/external/workshop_external.html)** |
 
 ## What it covers
 
